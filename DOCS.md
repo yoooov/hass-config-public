@@ -7,7 +7,7 @@ Speedtest.net: https://www.home-assistant.io/integrations/speedtestdotnet/
   - sensor.speedtest_download
   - sensor.speedtest_upload
   - sensor.speedtest_ping
-
+include_templates: https://www.reddit.com/r/homeassistant/comments/wu0870/how_to_include_templates_when_in_ui_editing_mode/
 
 Ping Integration:
  - Network rail card with new ping sensor: https://github.com/Madelena/hass-config-public/issues/34
