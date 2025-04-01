@@ -1,2 +1,115 @@
+**Axonometric Floor Plan:**
 - isometric-floorplan: https://github.com/knicholson32/isometric-floorplan?tab=readme-ov-file
 - 
+
+**Network:**
+Speedtest.net: https://www.home-assistant.io/integrations/speedtestdotnet/
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - sensor.speedtest_ping
+
+
+Ping Integration:
+ - Network rail card with new ping sensor: https://github.com/Madelena/hass-config-public/issues/34
+ - https://www.home-assistant.io/integrations/ping/
+ - https://community.home-assistant.io/t/ping-icmp-automation/745295/10
+ - https://github.com/home-assistant/core/issues/121875
+Ping de services web:
+ - https://www.antoineguilbert.fr/monitoring-ping-services-web-sur-home-assistant/
+
+
+
+binary_sensor.ping_cloudflare
+binary_sensor.ping_google
+binary_sensor.ping_my_website
+sensor.asuswrt_devices_connected
+sensor.speedtest_download
+sensor.valhalla_router_connected_devices
+binary_sensor.ping_valhalla_outlet
+binary_sensor.ping_valhalla_modem
+binary_sensor.ping_valhalla_router
+binary_sensor.ping_blue_cave_mesh
+binary_sensor.ping_kitchen_mesh_repeater
+binary_sensor.ping_bedroom_mesh_repeater
+binary_sensor.ping_dorothy_illinoise
+
+sensor.valhalla_router_wan_download_speed
+sensor.network_throughput_out_eth0 
+sensor.valhalla_router_wan_download
+sensor.valhalla_router_wan_upload_speed
+sensor.network_throughput_in_eth0
+sensor.valhalla_router_wan_upload
+
+sensor.valhalla_router_wired_download_speed
+sensor.workspace_mesh_node_wired_download_speed
+sensor.bedroom_mesh_node_wired_download_speed
+sensor.valhalla_router_wired_download
+sensor.workspace_mesh_node_wired_download
+sensor.bedroom_mesh_node_wired_download
+
+sensor.valhalla_router_wlan0_download_speed
+sensor.workspace_mesh_node_wlan0_download_speed
+sensor.bedroom_mesh_node_wlan0_download_speed
+
+sensor.valhalla_router_wlan0_download
+sensor.workspace_mesh_node_wlan0_download
+sensor.bedroom_mesh_node_wlan0_download
+
+sensor.valhalla_router_wlan1_download_speed
+sensor.workspace_mesh_node_wlan1_download_speed
+sensor.bedroom_mesh_node_wlan1_download_speed
+
+sensor.valhalla_router_wlan1_download
+sensor.workspace_mesh_node_wlan1_download
+sensor.bedroom_mesh_node_wlan1_download
+
+sensor.valhalla_router_wired_upload_speed
+sensor.workspace_mesh_node_wired_upload_speed
+sensor.bedroom_mesh_node_wired_upload_speed
+
+sensor.valhalla_router_wired_upload
+sensor.workspace_mesh_node_wired_upload
+sensor.bedroom_mesh_node_wired_upload
+
+sensor.valhalla_router_wlan0_upload_speed
+sensor.workspace_mesh_node_wlan0_upload_speed
+sensor.bedroom_mesh_node_wlan0_upload_speed
+
+sensor.valhalla_router_wlan0_upload
+sensor.workspace_mesh_node_wlan0_upload
+sensor.bedroom_mesh_node_wlan0_upload
+
+sensor.valhalla_router_wlan1_upload_speed
+sensor.workspace_mesh_node_wlan1_upload_speed
+sensor.bedroom_mesh_node_wlan1_upload_speed
+
+sensor.valhalla_router_wlan1_upload
+sensor.workspace_mesh_node_wlan1_upload
+sensor.bedroom_mesh_node_wlan1_upload
+
+VALHALLA ROUTER:
+sensor.valhalla_router_cpu
+sensor.valhalla_router_temperature_cpu
+sensor.valhalla_router_ram
+sensor.valhalla_router_connected_devices
+
+UNISON:
+sensor.unison_processor_use
+sensor.unison_processor_temperature
+sensor.unison_glances_ram_used_percent
+
+VALHALLA OUTLET:
+binary_sensor.valhalla_outlet_modem
+binary_sensor.valhalla_outlet_router
+sensor.valhalla_outlet_event
+
+WIFI SIGNAL STRENGTH:
+sensor.weatherman_wifi_signal_sensor
+sensor.kaleidoscape_wifi_signal_strength
+sensor.zuneth_wifi_signal_strength
+
+ADGUARD (a0d7b954_adguard):
+sensor.adguard_dns_queries
+sensor.adguard_dns_queries_blocked_ratio
+sensor.adguard_average_processing_speed
+
