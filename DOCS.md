@@ -113,3 +113,54 @@ sensor.adguard_dns_queries
 sensor.adguard_dns_queries_blocked_ratio
 sensor.adguard_average_processing_speed
 
+
+## Astrometrics
+
+binary_sensor.ping_my_website
+url_path: 'https://MadelenaMak.com'
+
+binary_sensor.ping_my_website
+url_path: 'https://www.astrospheric.com/'
+
+sensor.noaa_space_weather_solar_wind_magnetic_fields_bt
+sensor.noaa_space_weather_solar_wind_magnetic_fields_bz
+sensor.noaa_space_weather_solar_wind_speed
+sensor.noaa_space_weather_noon_10_7cm_radio_flux
+sensor.aurora_visibility_aurora_visibility
+sensor.noaa_space_weather_alerts
+sensor.noaa_space_weather_alert_1
+sensor.noaa_space_weather_alert_2
+sensor.noaa_space_weather_alert_3
+sensor.noaa_space_weather_alert_4
+sensor.noaa_space_weather_alert_5
+- Radio Blackout
+sensor.noaa_space_weather_r_24hr
+- Solar Radiation Storm
+sensor.noaa_space_weather_s_24hr
+- Geomagnetic Storm
+sensor.noaa_space_weather_g_24hr
+sensor.noaa_space_weather_r_latest
+sensor.noaa_space_weather_s_latest
+sensor.noaa_space_weather_g_latest
+sensor.noaa_space_weather_r_majorprob_1day
+sensor.noaa_space_weather_r_minorprob_1day
+sensor.noaa_space_weather_s_1day
+sensor.noaa_space_weather_g_1day
+sensor.noaa_space_weather_r_majorprob_2day
+sensor.noaa_space_weather_r_minorprob_2day
+sensor.noaa_space_weather_s_2day
+sensor.noaa_space_weather_g_2day
+sensor.noaa_space_weather_r_majorprob_3day
+sensor.noaa_space_weather_r_minorprob_3day
+sensor.noaa_space_weather_s_3day
+sensor.noaa_space_weather_g_3day
+
+### Luna Location, Planetary Positions, Man Made Object locations (ISS, etc.)
+
+sensor.nasa_iss_station_report
+sensor.rocketlaunch_live_next_1
+sensor.rocketlaunch_live_next_2
+sensor.rocketlaunch_live_next_3
+sensor.rocketlaunch_live_next_4
+sensor.rocketlaunch_live_next_5
+
