@@ -1,2 +1,2 @@
-- https://github.com/knicholson32/isometric-floorplan?tab=readme-ov-file
+- isometric-floorplan: https://github.com/knicholson32/isometric-floorplan?tab=readme-ov-file
 - 
