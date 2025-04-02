@@ -1,3 +1,3 @@
 ## Checks
 
-- mini-graph-card
+- custom:mini-graph-card
