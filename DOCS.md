@@ -1,3 +1,35 @@
+# Digest
+
+## Hardware
+
+Unison
+- HASS instance RPi4b 4G RAM / 128GB SSD
+- ConBee II zigbee dongle
+- GW Insteon hub
+- GW Philips Hue hub
+
+Terpsichora
+- Logitech Harmony Hub (Entertainment)
+
+Genesis
+- Prusa 3D printer
+
+Misc
+- Ikea Tradfri ZigBee signal repeaters
+
+## Interesting issues
+
+- button-card/button-card.js reference in configuration.yaml <https://github.com/Madelena/hass-config-public/issues/3>
+- configuration.yaml <https://github.com/Madelena/hass-config-public/issues/12>
+- bar-row <https://github.com/Madelena/hass-config-public/issues/27>
+- ping sensor <https://github.com/Madelena/hass-config-public/issues/9>
+- isometric svg floorplan created via Sketchup 
+- network rail map <https://github.com/Madelena/hass-config-public/issues/36>
+- network rail map <https://github.com/Madelena/hass-config-public/issues/34>
+
+
+## Dashboards
+
 **Axonometric Floor Plan:**
 - isometric-floorplan: https://github.com/knicholson32/isometric-floorplan?tab=readme-ov-file
 
