@@ -1,6 +1,6 @@
 views:
   - type: sections
-    max_columns: 4
+    max_columns: 5
     icon: mdi:home-circle
     path: summary
     sections:
@@ -493,7 +493,7 @@ views:
                 layout:
                   margin: 0
                 view_layout:
-                  grid-area: c3
+                  grid-area: c1
                   show:
                     mediaquery: '(min-width: 1440px)'
                 cards:
@@ -514,6 +514,35 @@ views:
                           name: NETWORK
                           label: More
                           link: /ui-dashboard/1
+                      - type: custom:button-card
+                        template:
+                          - live_tile_card
+                          - live_tile_with_long_state
+                          - live_tile_with_state_countdown
+                        entity: binary_sensor.1_1_1_1
+                        name: WAN
+                        state:
+                          - value: 'off'
+                            styles:
+                              card:
+                                - background: var(--primary-color)
+                          - value: 'on'
+                            styles:
+                              card:
+                                - background: var(--ha-card-background)
+                                - color: var(--primary-text-color)
+                        variables:
+                          aspect_ratio: '[[[ return Math.round(this.offsetWidth / 112) ]]]'
+                        view_layout:
+                          grid-column: 1/-2
+                      - type: custom:button-card
+                        template:
+                          - live_tile_with_graph
+                          - live_tile_with_state_unit
+                        variables:
+                          unit: Devices
+                        entity: sensor.192_168_0_106_eth0_rx
+                        name: Devices Connected
                       - type: custom:button-card
                         template:
                           - live_tile_with_graph
@@ -930,7 +959,7 @@ button_card_templates:
         if (isNaN(diff)) { return 'Unknown' }
         if (diff <= 0.05) { return 'Just now' }
         else if (diff <= 1) { return Math.round(diff * 60) + ' seconds ago' }
-        else { return moment(entity.last_changed).fromNow() }
+        else { return 'From ' + Math.round(diff) + ' min.' }
       ]]]
   live_tile_with_state_countdown:
     variables:
@@ -973,9 +1002,15 @@ button_card_templates:
         - text-align: left
         - line-height: 20px
   live_tile_with_state_unit:
+    entity: sensor.network_scanner
     variables:
       unit: '[[[ return entity.attributes.unit_of_measurement ]]]'
-      state_display: '[[[ return Math.round(entity.state) ]]]'
+      state_display: |
+        [[[ var devices = entity.state
+            var counter = devices
+            if (isNaN(counter)) { return 0 }
+            else { return counter } 
+        ]]]
     state_display: |
       [[[
         return variables.state_display + "<span style='font-size: var(--h6-font-size); font-weight: var(--h6-font-weight); text-transform: uppercase; opacity: .6;'> " + variables.unit + "</span>"
