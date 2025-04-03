@@ -155,14 +155,14 @@ views:
                         type: custom:button-card
                         template: header_card
                         variables:
-                          name: BATHOL STARSHIP FIELDS
+                          name: KIN BATHOL FIELDS
                           label: Areas
                           link: /config/areas/dashboard
                       Maddy:
                         type: custom:button-card
                         template: header_card
                         variables:
-                          name: BATHOL STARSHIP FIELDS
+                          name: KIN BATHOL FIELDS
                           label: Areas
                           link: /config/areas/dashboard
                         styles:
@@ -312,17 +312,17 @@ views:
                             service: floorplan.text_set
                             service_data: ${entity.state}
                         - entities:
-                            - sensor.bathroom_env_sensor_temperature
-                            - sensor.workspace_env_sensor_temperature
+                            - sensor.airrohr_sensor_temperature
+                            - sensor.esp01_dht11_temperature
                             - sensor.bedroom_hue_sensor_temperature
-                            - sensor.living_room_env_sensor_temperature
+                            - sensor.esp32_scd40_temperature
                             - sensor.storage_environment_sensor_temperature
                           state_action:
                             action: call-service
                             service: floorplan.text_set
                             service_data: ${entity.state + " °C"}
-                        - entity: sensor.bathroom_env_sensor_temperature
-                          element: sensor.bathroom_env_sensor_temperature.bg
+                        - entity: sensor.airrohr_sensor_temperature
+                          element: sensor.airrohr_sensor_temperature.bg
                           state_action:
                             action: call-service
                             service: floorplan.class_set
@@ -339,8 +339,8 @@ views:
                               class: >-
                                 ${(entity.state > 27) || (entity.state < 20) ?
                                 "bg-on" : "bg-off"}
-                        - entity: sensor.workspace_env_sensor_temperature
-                          element: sensor.workspace_env_sensor_temperature.bg
+                        - entity: sensor.esp01_dht11_temperature
+                          element: sensor.esp01_dht11_temperature.bg
                           state_action:
                             action: call-service
                             service: floorplan.class_set
@@ -357,8 +357,8 @@ views:
                               class: >-
                                 ${(entity.state > 27) || (entity.state < 20) ?
                                 "bg-on" : "bg-off"}
-                        - entity: sensor.living_room_env_sensor_temperature
-                          element: sensor.living_room_env_sensor_temperature.bg
+                        - entity: sensor.esp32_scd40_temperature
+                          element: sensor.esp32_scd40_temperature.bg
                           state_action:
                             action: call-service
                             service: floorplan.class_set
@@ -366,8 +366,8 @@ views:
                               class: >-
                                 ${(entity.state > 27) || (entity.state < 20) ?
                                 "bg-on" : "bg-off"}
-                        - entity: sensor.workspace_env_sensor_temperature
-                          element: sensor.workspace_env_sensor_temperature.bg
+                        - entity: sensor.esp01_dht11_temperature
+                          element: sensor.esp01_dht11_temperature.bg
                           state_action:
                             action: call-service
                             service: floorplan.class_set
