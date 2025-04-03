@@ -541,7 +541,7 @@ views:
                           - live_tile_with_state_unit
                         variables:
                           unit: Devices
-                        entity: sensor.192_168_0_106_eth0_rx
+                        entity: sensor.network_scanner
                         name: Devices Connected
                       - type: custom:button-card
                         template:
