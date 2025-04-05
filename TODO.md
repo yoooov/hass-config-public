@@ -19,4 +19,16 @@
   - PixelIt <https://github.com/pixelit-project/PixelIt>
   - Ulanzi TC001
  
-- dab+  
+- dab+
+
+- count of devices in **live_tile_with_last_changed_label**:
+ ```yaml
+label: |
+      [[[
+        var diff = (new Date() - new Date(entity.last_changed)) / 1000 / 60
+        if (isNaN(diff)) { return 'Unknown' }
+        if (diff <= 0.05) { return 'Just now' }
+        else if (diff <= 1) { return Math.round(diff * 60) + ' seconds ago' }
+        else { return 'From ' + Math.round(diff) + ' min.' }
+      ]]]
+```
