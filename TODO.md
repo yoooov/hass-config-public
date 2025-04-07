@@ -32,3 +32,9 @@ label: |
         else { return 'From ' + Math.round(diff) + ' min.' }
       ]]]
 ```
+
+
+```
+Template variable error: 'value_json' is undefined when rendering '{{ value_json.ip }}'
+```
+
