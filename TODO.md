@@ -34,7 +34,22 @@ label: |
 ```
 
 
+- External IP address
+
+https://www.home-assistant.io/integrations/sensor.rest/
+
 ```
 Template variable error: 'value_json' is undefined when rendering '{{ value_json.ip }}'
+
+sensor:
+  - platform: rest
+    name: "External IP"
+    resource: "https://api.ipify.org/?format=json"
+    value_template: "{{ value_json.ip }}"
+
+  - platform: rest
+    name: "External IPv6"
+    resource: "https://api6.ipify.org/?format=json"
+    value_template: "{{ value_json.ip }}"
 ```
 
