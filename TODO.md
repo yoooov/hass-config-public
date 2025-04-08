@@ -53,3 +53,5 @@ sensor:
     value_template: "{{ value_json.ip }}"
 ```
 
+- ping (new) <https://community.home-assistant.io/t/graph-ping-round-trip-average-attribute/111772/5>
+
