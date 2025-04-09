@@ -38,7 +38,7 @@ label: |
 
 https://www.home-assistant.io/integrations/sensor.rest/
 
-```
+```yaml
 Template variable error: 'value_json' is undefined when rendering '{{ value_json.ip }}'
 
 sensor:
@@ -54,4 +54,14 @@ sensor:
 ```
 
 - ping (new) <https://community.home-assistant.io/t/graph-ping-round-trip-average-attribute/111772/5>
+The ping sensor is set up from the UI now.
+The template sensor that exposes the round trip attribute from that as a sensor is still created in yaml. Though it too now has a new format:
+New (configuration.yaml):
 
+```yaml
+template:
+  - sensor:
+      - name: Ping Google Average
+        state: "{{ state_attr('binary_sensor.ping_google_dns', 'round_trip_time_avg') }}"
+        unit_of_measurement: ms
+```
