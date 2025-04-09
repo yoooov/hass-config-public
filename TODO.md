@@ -59,12 +59,18 @@ Legacy template:
 *This format is configured as a platform for the binary_sensor integration and not directly under the template integration.*
 *This format still works but is no longer recommended.*
 
+See <https://www.home-assistant.io/integrations/template/#configuration-variables>
+
 ```yaml
 - platform: template
   sensors:
-    template_ping_cloudflare:
-      friendly_name: "Ping Cloudflare"
-      value_template: "{{ states('binary_sensor.ping_cloudflare') }}"
+    template_ping_cloudflare: # sensor_name => The slug of the sensor.
+      friendly_name: "Ping Cloudflare" # Name to use in the frontend.
+      # unique_id string (Optional) An ID that uniquely identifies this binary sensor. Set this to a unique value to allow customization through the UI.
+      value_template: "{{ states('binary_sensor.ping_cloudflare') }}" # The sensor is on if the template evaluates as True and off otherwise. The actual appearance in the frontend (Open/Closed, Detected/Clear etc) depends on the sensor’s device_class value
+
+      # attribute_templates => Defines templates for attributes of the sensor.
+      #   attribute: template => The attribute and corresponding template.
       attribute_templates:
         round_trip_time_avg: "{{ states('sensor.ping_cloudflare_round_trip_time_average') }}"
 ```
