@@ -54,6 +54,21 @@ sensor:
 ```
 
 - ping (new) <https://community.home-assistant.io/t/graph-ping-round-trip-average-attribute/111772/5>
+
+Legacy template:
+*This format is configured as a platform for the binary_sensor integration and not directly under the template integration.*
+*This format still works but is no longer recommended.*
+
+```yaml
+- platform: template
+  sensors:
+    template_ping_cloudflare:
+      friendly_name: "Ping Cloudflare"
+      value_template: "{{ states('binary_sensor.ping_cloudflare') }}"
+      attribute_templates:
+        round_trip_time_avg: "{{ states('sensor.ping_cloudflare_round_trip_time_average') }}"
+```
+
 The ping sensor is set up from the UI now.
 The template sensor that exposes the round trip attribute from that as a sensor is still created in yaml. Though it too now has a new format:
 New (configuration.yaml):
@@ -65,3 +80,5 @@ template:
         state: "{{ state_attr('binary_sensor.ping_google_dns', 'round_trip_time_avg') }}"
         unit_of_measurement: ms
 ```
+
+
