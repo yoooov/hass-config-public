@@ -75,6 +75,8 @@ See <https://www.home-assistant.io/integrations/template/#configuration-variable
         round_trip_time_avg: "{{ states('sensor.ping_cloudflare_round_trip_time_average') }}"
 ```
 
+Convert from old legacy to new yaml config <https://community.home-assistant.io/t/migrating-from-legacy-templates/428536/3>
+
 The ping sensor is set up from the UI now.
 The template sensor that exposes the round trip attribute from that as a sensor is still created in yaml. Though it too now has a new format:
 New (configuration.yaml):
