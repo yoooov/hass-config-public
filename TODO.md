@@ -90,3 +90,41 @@ template:
 ```
 
 
+**Glances** on Mac OS
+
+```
+$ python3 -m pip install "glances[all]"
+# see https://github.com/nicolargo/glances/issues/3116
+$ python3 -m pip uninstall netifaces2
+$ python3 -m pip install netifaces-plus
+
+$ which glances
+/Library/Frameworks/Python.framework/Versions/3.12/bin/glances
+```
+
+# set a plist com.tatooine.glances-web.plist
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.tatooine.glances-web</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Library/Frameworks/Python.framework/Versions/3.12/bin/glances</string>
+		<string>-w</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/Users/yoannvidil/Library/Logs/com.tatooine.glances-web.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/yoannvidil/Library/Logs/com.tatooine.glances-web.log</string>
+</dict>
+</plist>
+```
+
+Then `$ launchctl load ~/Library/LaunchAgents/com.tatooine.glances-web.plist`
