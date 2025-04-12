@@ -143,4 +143,16 @@ Then `$ launchctl load ~/Library/LaunchAgents/com.tatooine.glances-web.plist`
 
 - https://forum.hacf.fr/uploads/default/original/2X/1/11bec5ed5b420e2d8fb2a354833a9fcd1bc228d7.jpeg
 
-- 
+**Groups**
+
+indoor_temperature_sensors:
+  name: Indoor Temperature Sensors
+  entities:
+
+indoor_humidity_sensors:
+  name: Indoor Humidity Sensors
+  entities:
+
+**psychro-chart**
+
+- https://drajmarsh.bitbucket.io/psychro-chart2d.html
