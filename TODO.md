@@ -130,7 +130,12 @@ $ which glances
 Then `$ launchctl load ~/Library/LaunchAgents/com.tatooine.glances-web.plist`
 
 
-SFR Box NB6VAC Api Rest
+**SFR Box NB6VAC Api Rest**
 
 - https://lafibre.info/sfr-la-fibre/nb6vac-et-api/
 - file:///Users/yoannvidil/Downloads/apirest_4.0.pdf
+
+**Comfort notion**
+
+- https://forum.hacf.fr/t/confort-evaluer-le-confort-ressenti-dans-une-piece/12571/3
+
