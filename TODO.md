@@ -139,3 +139,8 @@ Then `$ launchctl load ~/Library/LaunchAgents/com.tatooine.glances-web.plist`
 
 - https://forum.hacf.fr/t/confort-evaluer-le-confort-ressenti-dans-une-piece/12571/3
 
+**Carbon emissions**
+
+- https://forum.hacf.fr/uploads/default/original/2X/1/11bec5ed5b420e2d8fb2a354833a9fcd1bc228d7.jpeg
+
+- 
