@@ -156,3 +156,9 @@ indoor_humidity_sensors:
 **psychro-chart**
 
 - https://drajmarsh.bitbucket.io/psychro-chart2d.html
+
+**Mealie Recipes**
+
+- https://docs.mealie.io/documentation/getting-started/introduction/
+
+
