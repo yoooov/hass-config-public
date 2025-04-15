@@ -161,4 +161,8 @@ indoor_humidity_sensors:
 
 - https://docs.mealie.io/documentation/getting-started/introduction/
 
+**Astrometrics**
 
+- https://slowe.github.io/VirtualSky/custom
+
+  
