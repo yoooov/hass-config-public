@@ -1,3 +1,7 @@
+## Nice cards
+
+§ https://github.com/custom-cards/button-card/issues/718
+
 ## Checks
 
 - custom:mini-graph-card
